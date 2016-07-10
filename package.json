@@ -1,7 +1,7 @@
 {
   "name": "faded-multiselect",
   "version": "0.0.9",
-  "description": "A simple skinnable multiselect dropdown forweb",
+  "description": "A simple skinnable multiselect dropdown for web",
   "scripts": {
     "install": "node installer.js",
     "postinstall": "bower cache clean && bower install",
