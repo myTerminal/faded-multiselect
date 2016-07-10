@@ -1,3 +1,3 @@
-var fadedMultiselect = function () {
+var FadedMultiselect = function () {
     
 };

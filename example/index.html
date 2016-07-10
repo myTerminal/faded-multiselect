@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>faded-multiselect demo</title>
+        <link rel="stylesheet" type="text/css" href="../build/styles/faded-multiselect.css" />
+        <style type="text/css">
+         body
+         {
+             background-color: #E0E0E0;
+             font-family: Arial;
+             line-height: 24px;
+         }
+         
+         .code
+         {
+             font-family: 'Courier New';   
+         }
+        </style>
+        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../build/scripts/faded-multiselect.min.js"></script>
+        <script type="text/javascript">
+         $(document).ready(function () {
+             var multiselect = new FadedMultiselect();
+         });
+        </script>
+    </head>
+    <body>
+        <h2>faded-multiselect demo</h2>
+        Below is a sample implementation of a faded-multiselect dropdown <br />
+        <br />
+        <div class="myContent">
+            <select multiple id="select-to-be-tested">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+        </div>
+        <br />
+	Find faded-multiselect at <a href="https://github.com/myTerminal/faded-multiselect" target="_blank">https://github.com/myTerminal/faded-multiselect</a>.
+    </body>
+</html>

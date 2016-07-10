@@ -20,5 +20,9 @@
   ],
   "dependencies": {
     "jquery": "*"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "assert": "^0.1.0"
   }
 }
