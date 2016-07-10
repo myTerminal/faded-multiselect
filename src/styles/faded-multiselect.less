@@ -1,5 +1,45 @@
-body {
-    .some {
-        backgound-color: red;
+.faded-multiselect {
+    width: 50%;
+    height: 30px;
+
+    .faded-multiselect-button {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .faded-multiselect-dropdown {
+        display: none;
+
+        .faded-multiselect-dropdown-option {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+
+            .faded-multiselect-dropdown-option input[type=checkbox] {
+                margin-top: 8px;
+                width: 14px;
+                height: 14px;
+            }
+
+            .faded-multiselect-dropdown-option span {
+                height: 100%;
+                line-height: 30px;
+            }
+        }
+    }
+
+    &.open {
+        .faded-multiselect-dropdown {
+            display: inline-block;
+            width: 100%;
+        }        
+    }
+    
+    .original-multiselect {
+        display: none;
     }
 }
+
+
+
+

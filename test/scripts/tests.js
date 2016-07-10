@@ -10,9 +10,10 @@ $(document).ready(function () {
 mocha.setup('tdd');
 
 suite('faded-multiselect tests', function () {
-    var multiselect = new FadedMultiselect();
+    var originalDropdownSelector = "#original-multiselect",
+        multiselect = new FadedMultiselect(originalDropdownSelector);
     
     test('Adds the required markup', function () {
-        assert.ok(true, "Great");
+        assert.ok($(".faded-multiselect").length, "Creates the parent of faded-multiselect");
     });
 });
