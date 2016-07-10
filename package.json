@@ -1,0 +1,32 @@
+{
+  "name": "faded-multiselect",
+  "version": "0.0.9",
+  "description": "A simple skinnable multiselect dropdown forweb",
+  "scripts": {
+    "install": "node installer.js",
+    "develop": "grunt develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myTerminal/faded-multiselect"
+  },
+  "keywords": [
+    "myTerminal",
+    "html"
+  ],
+  "author": "Ismail Ansari <team.terminal@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/myTerminal/faded-multiselect/issues"
+  },
+  "dependencies": {
+    "package-script": "0.0.8"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-less": "~1.3.0",
+    "grunt-contrib-watch": "~1.0.0"
+  }
+}

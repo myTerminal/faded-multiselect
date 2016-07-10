@@ -1,0 +1,24 @@
+{
+  "name": "faded-multiselect",
+  "description": "A simple skinnable multiselect dropdown forweb",
+  "main": "",
+  "authors": [
+    "Ismail Ansari <team.terminal@gmail.com>"
+  ],
+  "license": "BSD",
+  "keywords": [
+    "myTerminal",
+    "html"
+  ],
+  "homepage": "https://github.com/myTerminal/faded-multiselect",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  }
+}
