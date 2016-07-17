@@ -13,6 +13,9 @@
   display: none;
   background-color: #FFF;
   position: relative;
+  border: 1px solid #CCC;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .faded-multiselect .faded-multiselect-dropdown .faded-multiselect-dropdown-option {
   width: 100%;

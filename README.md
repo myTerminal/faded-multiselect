@@ -12,4 +12,54 @@
 
 A simple skinnable multiselect dropdown for web
 
-## Incomplete
+## Features
+
+* An easy to use multiselect dropdown that works out of the box with a simple function invocation.
+* Can be easily themed
+
+## How to Use
+
+Include `faded-multiselect.min.js` script file and `fade-multiselect.css` stylesheet along with jQuery in the HTML page.
+
+Create an HTML multiselect as below:
+
+    <select multiple id="select-to-be-tested">
+        <option value="option1" selected>Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+Instantiate a multiselect dropdown on the `select` as below:
+
+    multiselect = new FadedMultiselect("#select-to-be-tested");
+
+When the HTML `select` changes (addition or removal of options), just invoke `refresh()` on the multiselect as
+
+    multiselect.refresh();
+
+In order to get an array of selected options, call `getValue()` on the multiselect as
+
+    multiselect.getValue();
+
+When the multiselect is no longer required, call a `destroy()` on the multiselect and the original multiselect will be brought back on the page.
+
+    multiselect.destroy();
+
+## Dependency
+
+* jQuery
+
+## To-do
+
+* Close the dropdown on other clicks
+* `Select All` and `Unselect All` options
+* Display a list of selected items on the select button
+* Scrollbar in the dropdown
+* Search functionality
+* Auto sort selected items to the top
+
+## Let me know
+
+Let me know your suggestions on improving *faded-multiselect* at ismail@teamfluxion.com
+
+Thank you!
