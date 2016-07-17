@@ -19,8 +19,10 @@
         <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="../build/scripts/faded-multiselect.min.js"></script>
         <script type="text/javascript">
+         var multiselect;
+         
          $(document).ready(function () {
-             var multiselect = new FadedMultiselect("#select-to-be-tested");
+             multiselect = new FadedMultiselect("#select-to-be-tested");
          });
         </script>
     </head>
@@ -30,7 +32,7 @@
         <br />
         <div class="myContent">
             <select multiple id="select-to-be-tested">
-                <option value="option1">Option 1</option>
+                <option value="option1" selected>Option 1</option>
                 <option value="option2">Option 2</option>
                 <option value="option3">Option 3</option>
             </select>

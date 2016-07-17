@@ -1,50 +1,91 @@
 var FadedMultiselect = function (elementSelector) {
-    var originalMultiselect = $(elementSelector).first(),
-        optionTemplate = "<div class='faded-multiselect-dropdown-option'><input type='checkbox'><span>Dummy Text</span></div>",
-        fadedMultiselectParent,
+    var om = $(elementSelector).first(),
+        parentTemplate = "" +
+            "<div class='faded-multiselect'>" +
+            "  <button class='faded-multiselect-button'>" +
+            "    Select" +
+            "    <div class='caret'>&#9662;</div>" +
+            "  </button>" +
+            "  <div class='faded-multiselect-dropdown'></div>" +
+            "  <div class='original-multiselect'></div>" +
+            "</div>",
+        optionTemplate = "" +
+            "<div class='faded-multiselect-dropdown-option'>" +
+            "  <input type='checkbox'>" +
+            "  <span>OptionX</span>" +
+            "</div>",
+        fmParent,
 
         init = function () {
-            fadedMultiselectParent = $("<div class='faded-multiselect'><button class='faded-multiselect-button'>Select</button><div class='faded-multiselect-dropdown'></div><div class='original-multiselect'></div></div>");
-            
-            originalMultiselect = originalMultiselect.replaceWith(fadedMultiselectParent);
+            fmParent = $(parentTemplate);
+            om = om.replaceWith(fmParent);
+            fmParent.find(".original-multiselect").append(om);
+            refresh();
+        },
 
-            fadedMultiselectParent.find(".original-multiselect").append(originalMultiselect);
-
+        refresh = function () {
+            clearItems();
             copyItemsFromSelect();
             
-            fadedMultiselectParent.find(".faded-multiselect-button").bind("click", function () {
+            fmParent.find(".faded-multiselect-button").bind("click", function () {
                 $(this).closest(".faded-multiselect").toggleClass("open");
+            });
+
+            fmParent.find(".faded-multiselect-dropdown-option").bind("click", function () {
+                var checkbox = $(this).find("input[type=checkbox]");
+                checkbox.attr("checked", !checkbox.attr("checked"));
+                saveItemStateToNative($(this).attr("data-value"));
             });
         },
 
+        destroy = function () {
+            fmParent.replaceWith(om);
+        },
+
+        getValue = function () {
+            return om.val();
+        },
+
         clearItems = function () {
-            fadedMultiselectParent.find(".faded-multiselect-dropdown").html("");
+            fmParent.find(".faded-multiselect-dropdown").html("");
         },
 
         copyItemsFromSelect = function () {
-            clearItems();
-            
-            $.each(originalMultiselect.find("option"), function (i, e) {
-                var newOption = $(optionTemplate),
-                    oldOption = $(e);
+            $.each(om.find("option"), function (i, e) {
+                var oldOption = $(e),
+                    newOption = $(optionTemplate);
 
                 newOption.find("span").html(oldOption.html());
                 newOption.attr("data-value", oldOption.val());
-                fadedMultiselectParent.find(".faded-multiselect-dropdown").append(newOption);
-            });            
+                fmParent.find(".faded-multiselect-dropdown").append(newOption);
+            });
+
+            loadItemStatesFromNative();
         },
 
-        copyStateFromSelect = function () {
-            
+        loadItemStatesFromNative = function () {
+            $.each(om.find("option"), function (i, e) {
+                var oldOption = $(e),
+                    isSelected = oldOption[0].selected,
+                    value = $(e).attr("value"),
+                    newOption = fmParent.find(".faded-multiselect-dropdown").find("[data-value=" + value + "]"),
+                    checkbox = newOption.find("input[type=checkbox]");
+
+                checkbox.attr("checked", isSelected);
+            });
         },
 
-        lastItem = function () {
-            
+        saveItemStateToNative = function (value) {
+            var option = om.find("option[value=" + value + "]")[0];
+            option.selected = !option.selected;
         };
 
-        init();
+    init();
 
     return {
-        init: init
+        init: init,
+        refresh: refresh,
+        destroy: destroy,
+        getValue: getValue
     };
 };
