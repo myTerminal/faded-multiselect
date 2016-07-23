@@ -51,9 +51,6 @@ When the multiselect is no longer required, call a `destroy()` on the multiselec
 
 ## To-do
 
-* Close the dropdown on other clicks
-* `Select All` and `Unselect All` options
-* Display a list of selected items on the select button
 * Scrollbar in the dropdown
 * Search functionality
 * Auto sort selected items to the top
