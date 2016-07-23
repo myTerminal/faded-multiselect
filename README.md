@@ -45,6 +45,14 @@ When the multiselect is no longer required, call a `destroy()` on the multiselec
 
     multiselect.destroy();
 
+### Options
+
+For an internal *Select All* and *Unselect All* option, initialize the multiselect as
+
+    multiselect = new FadedMultiselect("#select-to-be-tested", {
+        allOption: true
+    });
+
 ## Dependency
 
 * jQuery
