@@ -125,13 +125,20 @@ var FadedMultiselect = function (elementSelector, options) {
         },
 
         saveItemStateToNative = function (item) {
-            if ($(item).attr("data-special") === "all") {
+            var itemSpecialTag = $(item).attr("data-special"),
+                isItemToSelectAll = itemSpecialTag === "all";
+
+            if (isItemToSelectAll) {
                 toggleSelectAllItems();
             } else {
                 var value = $(item).attr("data-value"),
                     option = om.find("option[value=" + value + "]")[0];
 
                 option.selected = !option.selected;
+            }
+
+            if (options.onStateChange) {
+                options.onStateChange(getValue(), itemSpecialTag || value);
             }
         },
 
@@ -174,18 +181,25 @@ var FadedMultiselect = function (elementSelector, options) {
         updateButtonText = function () {
             var countOfSelectedOptions = getValue().length,
                 buttonLabel = fmParent.find(".faded-multiselect-button-text"),
-                selectedOptionText;
+                selectedOptionText,
+                buttonText;
 
-            if (!countOfSelectedOptions) {
-                buttonLabel.text(labels.noneSelected);
-            } else if (countOfSelectedOptions === om.find("option").length) {
-                buttonLabel.text(labels.allSelected);
-            } else if (countOfSelectedOptions === 1) {
-                selectedOptionText = om.find("option[value=" + getValue()[0] + "]").text();
-                buttonLabel.text(selectedOptionText);
+            if (options.buttonText) {
+                buttonText = options.buttonText(getValue());
             } else {
-                buttonLabel.text(countOfSelectedOptions + " " + labels.selected);
+                if (!countOfSelectedOptions) {
+                    buttonText = labels.noneSelected;
+                } else if (countOfSelectedOptions === om.find("option").length) {
+                    buttonText = labels.allSelected;
+                } else if (countOfSelectedOptions === 1) {
+                    selectedOptionText = om.find("option[value=" + getValue()[0] + "]").text();
+                    buttonText = selectedOptionText;
+                } else {
+                    buttonText = countOfSelectedOptions + " " + labels.selected;
+                }
             }
+
+            buttonLabel.text(buttonText);
         };
 
     options = options || {};

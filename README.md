@@ -53,6 +53,23 @@ For an internal *Select All* and *Unselect All* option, initialize the multisele
         allOption: true
     });
 
+To be notified on every value change, supply a function to be invoked on every state change as shown below
+
+    multiselect = new FadedMultiselect("#select-to-be-tested", {
+        onStateChange: function (value, item) {
+            // Use 'value' to track the current selection
+            // Use 'item' to track the currently toggled item
+        }
+    })
+
+To set a custom dropdown button text, supply a function that returns the button text on a particular selection as shown below
+
+    multiselect = new FadedMultiselect("#select-to-be-tested", {
+        buttonText: function (value) {
+            // Use 'value' to get an array of selection in the dropdown
+        }
+    })
+
 ## Dependency
 
 * jQuery
