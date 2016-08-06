@@ -14,5 +14,9 @@ require('package-script').spawn([
     {
         command: "npm",
         args: ["install", "-g", "istanbul"]
+    },
+    {
+        command: "npm",
+        args: ["install", "-g", "mocha-phantomjs"]
     }
 ]);
