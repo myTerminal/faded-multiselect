@@ -1,7 +1,7 @@
 /*global $, mocha, describe, it, assert, mochaPhantomJS, FadedMultiselect */
 
-describe('Array', function() {
-    describe('#indexOf()', function() {
+describe('Tests for faded-multiselect', function() {
+    describe('Markup creation', function() {
         var originalDropdownSelector = "#original-multiselect",
             multiselect = new FadedMultiselect(originalDropdownSelector);
         
