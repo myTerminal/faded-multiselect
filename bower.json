@@ -1,21 +1,35 @@
 {
   "name": "faded-multiselect",
   "description": "A simple skinnable multiselect dropdown for web",
-  "main": "",
+  "main": [
+    "src/scripts/faded-multiselect.js",
+    "src/styles/faded-multiselect.less"
+  ],
   "authors": [
     "Ismail Ansari <team.terminal@gmail.com>"
   ],
-  "license": "BSD",
+  "license": "GPL-3.0",
   "keywords": [
     "myTerminal",
-    "html"
+    "html",
+    "multiselect"
   ],
   "homepage": "https://github.com/myTerminal/faded-multiselect",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/myTerminal/faded-multiselect.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "test"
+    "bower.json",
+    "GruntFile.js",
+    "installer.js",
+    "package.json",
+    "example",
+    "test",
+    "tests"
   ],
   "dependencies": {
     "jquery": "*"
@@ -23,5 +37,8 @@
   "devDependencies": {
     "mocha": "^2.5.3",
     "assert": "^0.1.0"
-  }
+  },
+  "moduleType": [
+    "globals"
+  ]
 }
