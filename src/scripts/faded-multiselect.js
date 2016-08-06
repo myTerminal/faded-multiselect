@@ -113,9 +113,7 @@ var FadedMultiselect = function (elementSelector, options) {
                 return;
             }
 
-            var selectionLength = getValue().length,
-                totalOptions = om.find("option").length,
-                checkboxForAll = fmParent.find("[data-special=all] input[type=checkbox]");
+            var checkboxForAll = getCheckboxForAll();
 
             if (getValue().length === om.find("option").length) {
                 checkboxForAll.attr("checked", true);
@@ -162,10 +160,14 @@ var FadedMultiselect = function (elementSelector, options) {
 
         setStateForAll = function () {
             var countOfSelectedItems = getValue().length,
-                totalOptionsToSelect = om.find("option").length,
-                checkboxForAll = fmParent.find("[data-special=all] input[type=checkbox]");
+                totalOptionsToSelect = om.find("option").length;
 
-            checkboxForAll.attr("checked", countOfSelectedItems === totalOptionsToSelect);
+            getCheckboxForAll().attr("checked",
+                                     countOfSelectedItems === totalOptionsToSelect);
+        },
+
+        getCheckboxForAll = function () {
+            return fmParent.find("[data-special=all] input[type=checkbox]");
         },
 
         toggleSelectAllItems = function () {
