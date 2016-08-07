@@ -47,6 +47,7 @@ var FadedMultiselect = function (elementSelector, options) {
         },
 
         destroy = function () {
+            clearItems();
             fmParent.replaceWith(om);
         },
 
@@ -66,7 +67,9 @@ var FadedMultiselect = function (elementSelector, options) {
         },
 
         clearItems = function () {
-            fmParent.find(".faded-multiselect-dropdown").html("");
+            fmParent.find(".faded-multiselect-button").unbind("click");
+            fmParent.find(".faded-multiselect-dropdown-option").unbind("click");
+            fmParent.find(".faded-multiselect-dropdown-option").remove();
         },
 
         addAllOption = function () {
