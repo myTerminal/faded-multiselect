@@ -34,7 +34,6 @@ var FadedMultiselect = function (elementSelector, options) {
         },
 
         refresh = function () {
-            unbindEvents();
             clearItems();
 
             addAllOption();
@@ -67,8 +66,7 @@ var FadedMultiselect = function (elementSelector, options) {
         },
 
         clearItems = function () {
-            fmParent.find(".faded-multiselect-button").unbind("click");
-            fmParent.find(".faded-multiselect-dropdown-option").unbind("click");
+            unbindEvents();
             fmParent.find(".faded-multiselect-dropdown-option").remove();
         },
 
