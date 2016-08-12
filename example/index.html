@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>faded-multiselect demo</title>
+        <link rel="stylesheet" type="text/css" href="../bower_components/faded-scrollbar/build/styles/faded-scrollbar.css" />
         <link rel="stylesheet" type="text/css" href="../build/styles/faded-multiselect.css" />
         <style type="text/css">
          body
@@ -17,13 +18,15 @@
          }
         </style>
         <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../bower_components/faded-scrollbar/build/scripts/faded-scrollbar.min.js"></script>
         <script type="text/javascript" src="../build/scripts/faded-multiselect.min.js"></script>
         <script type="text/javascript">
          var multiselect;
          
          $(document).ready(function () {
              multiselect = new FadedMultiselect("#select-to-be-tested", {
-                 allOption: true
+                 allOption: true,
+                 maxDropdownHeight: 100
              });
          });
         </script>

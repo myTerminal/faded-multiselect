@@ -61,7 +61,7 @@ To be notified on every value change, supply a function to be invoked on every s
             // Use 'value' to track the current selection
             // Use 'item' to track the currently toggled item
         }
-    })
+    });
 
 To set a custom dropdown button text, supply a function that returns the button text on a particular selection as shown below
 
@@ -69,15 +69,21 @@ To set a custom dropdown button text, supply a function that returns the button 
         buttonText: function (value) {
             // Use 'value' to get an array of selection in the dropdown
         }
-    })
+    });
+
+To limit the dropdown height, supply `maxDropdownHeight` and a skinnable scrollbar will be used within the dropdown
+
+    multiselect = new FadedMultiselect("#select-to-be-tested", {
+        maxDropdownHeight: 200
+    });
 
 ## Dependency
 
 * jQuery
+* faded-scrollbar
 
 ## To-do
 
-* Scrollbar in the dropdown
 * Search functionality
 * Auto sort selected items to the top
 

@@ -23,6 +23,7 @@ var FadedMultiselect = function (elementSelector, options) {
             "  <span>OptionX</span>" +
             "</div>",
         fmParent,
+        scrollbar,
 
         init = function () {
             fmParent = $(parentTemplate);
@@ -34,12 +35,23 @@ var FadedMultiselect = function (elementSelector, options) {
         },
 
         refresh = function () {
+            if (options.maxDropdownHeight) {
+                if (scrollbar) {
+                    scrollbar.destroy();
+                }
+            }
+
             clearItems();
 
             addAllOption();
             copyItemsFromSelect();
+
+            if (options.maxDropdownHeight) {
+                fmParent.find(".faded-multiselect-dropdown").height(options.maxDropdownHeight);
+                scrollbar = new FadedScrollbar(fmParent.find(".faded-multiselect-dropdown"));
+            }
             
-            fmParent.find(".faded-multiselect-button").bind("click", onButtonClick);
+            fmParent.find(".faded-multiselect-button").bind("mousedown", onButtonClick);
             fmParent.find(".faded-multiselect-dropdown-option").bind("click", onItemClick);
 
             updateButtonText();
@@ -47,6 +59,11 @@ var FadedMultiselect = function (elementSelector, options) {
 
         destroy = function () {
             clearItems();
+
+            if (scrollbar) {
+                scrollbar.destroy();
+            }
+
             fmParent.replaceWith(om);
         },
 
@@ -55,13 +72,26 @@ var FadedMultiselect = function (elementSelector, options) {
         },
 
         bindClose = function () {
-            $("html").bind("click", function () {
-                fmParent.removeClass("open");
+            $("html").bind("mousedown", function (evt) {
+                evt.stopPropagation();
+                closeDropdown();
             });
         },
 
+        closeDropdown = function () {
+            fmParent.removeClass("open");
+        },
+
+        openDropdown = function () {
+            fmParent.addClass("open");
+
+            if (scrollbar) {
+                scrollbar.refresh();
+            }
+        },
+
         unbindEvents = function () {
-            fmParent.find(".faded-multiselect-button").unbind("click");
+            fmParent.find(".faded-multiselect-button").unbind("mousedown");
             fmParent.find(".faded-multiselect-dropdown-option").unbind("click");
         },
 
@@ -144,7 +174,11 @@ var FadedMultiselect = function (elementSelector, options) {
         onButtonClick = function (event) {
             event.stopPropagation();
 
-            $(this).closest(".faded-multiselect").toggleClass("open");
+            if (fmParent.hasClass("open")) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
         },
 
         onItemClick = function (event) {

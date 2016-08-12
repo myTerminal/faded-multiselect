@@ -83,15 +83,15 @@ describe("Tests for faded-multiselect", function() {
         it("Should open and close the dropdown", function () {
             assert.ok(!globals.newMultiselect.hasClass("open"), "The dropdown is closed initially");
 
-            globals.multiselectButton.click();
-            assert.ok(globals.newMultiselect.hasClass("open"), "The dropdown is opened on click");
+            globals.multiselectButton.mousedown();
+            assert.ok(globals.newMultiselect.hasClass("open"), "The dropdown is opened on mousedown");
 
-            globals.multiselectButton.click();
-            assert.ok(!globals.newMultiselect.hasClass("open"), "The dropdown is closed on click");
+            globals.multiselectButton.mousedown();
+            assert.ok(!globals.newMultiselect.hasClass("open"), "The dropdown is closed on mousedown");
 
-            globals.multiselectButton.click();
-            $("body").click();
-            assert.ok(!globals.newMultiselect.hasClass("open"), "The dropdown is closed when clicked elsewhere");
+            globals.multiselectButton.mousedown();
+            $("body").mousedown();
+            assert.ok(!globals.newMultiselect.hasClass("open"), "The dropdown is closed when mouse is down elsewhere");
         });
 
         it("Should sync selection between the two dropdowns", function () {
@@ -228,7 +228,7 @@ describe("Tests for faded-multiselect", function() {
 
             $(globals.optionsInNewMultiselect[1]).click();
             assert.ok(allCheckbox.attr("checked") !== "checked",
-                         "Unchecks the 'All' option when even one of the options have been unselected");
+                      "Unchecks the 'All' option when even one of the options have been unselected");
         });
     });
 
@@ -297,16 +297,42 @@ describe("Tests for faded-multiselect", function() {
 
             secondOption.click();
             assert.deepEqual(globals.lastValue, globals.multiselect.getValue(),
-                         "Passes current value to the handler");
+                             "Passes current value to the handler");
             assert.equal(globals.lastToggledValue, secondOption.attr("data-value"),
                          "Passes the last selected item value to the handler");
 
             var firstOption = $(globals.optionsInNewMultiselect[0]);
             firstOption.click();
             assert.deepEqual(globals.lastValue, globals.multiselect.getValue(),
-                         "Passes current value to the handler");
+                             "Passes current value to the handler");
             assert.equal(globals.lastToggledValue, "all",
                          "Passes the last selected item value to the handler");
+        });
+    });
+
+    describe("Advanced: Scrollbar", function () {
+        before(function () {
+            globals.multiselect = new FadedMultiselect(originalMultiselectSelector, {
+                allOption: true,
+                maxDropdownHeight: 50
+            });
+            refreshGlobals();
+        });
+
+        after(function () {
+            globals.multiselect.destroy();
+        });
+
+        it("Markup for the scrollbar", function () {
+            assert.ok(globals.multiselectDropdown.find(".faded-scrollbar-parent").length,
+                      "Creates a scrollbar when told to");
+        });
+
+        it("Destroys the scrollbar on destroy", function () {
+            globals.multiselect.destroy();
+            refreshGlobals();
+            assert.ok(!globals.multiselectDropdown.find(".faded-scrollbar-parent").length,
+                      "Scrollbar is not there anymore");
         });
     });
 });

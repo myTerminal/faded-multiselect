@@ -32,7 +32,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "*"
+    "jquery": "*",
+    "faded-scrollbar": "^0.9.1"
   },
   "devDependencies": {
     "mocha": "^2.5.3",
