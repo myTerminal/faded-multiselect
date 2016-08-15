@@ -1,6 +1,6 @@
 {
   "name": "faded-multiselect",
-  "version": "0.0.9",
+  "version": "0.9.0",
   "description": "A simple skinnable multiselect dropdown for web",
   "scripts": {
     "install": "node installer.js",
@@ -16,8 +16,8 @@
     "myTerminal",
     "html"
   ],
-  "author": "Ismail Ansari <team.terminal@gmail.com>",
-  "license": "BSD",
+  "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/myTerminal/faded-multiselect/issues"
   },
