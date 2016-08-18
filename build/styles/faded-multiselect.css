@@ -1,0 +1,44 @@
+.faded-multiselect {
+  width: 50%;
+  height: 30px;
+}
+.faded-multiselect .faded-multiselect-button {
+  width: 100%;
+  height: 100%;
+}
+.faded-multiselect .faded-multiselect-button .caret {
+  float: right;
+}
+.faded-multiselect .faded-multiselect-dropdown {
+  display: none;
+  background-color: #FFF;
+  position: relative;
+  border: 1px solid #CCC;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.faded-multiselect .faded-multiselect-dropdown .faded-multiselect-dropdown-option {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  border-bottom: 1px solid #CCC;
+}
+.faded-multiselect .faded-multiselect-dropdown .faded-multiselect-dropdown-option input[type=checkbox] {
+  float: left;
+  margin: 8px;
+  width: 14px;
+  height: 14px;
+}
+.faded-multiselect .faded-multiselect-dropdown .faded-multiselect-dropdown-option span {
+  float: left;
+  height: 100%;
+  line-height: 30px;
+}
+.faded-multiselect.open .faded-multiselect-dropdown {
+  display: inline-block;
+  width: 100%;
+}
+.faded-multiselect .original-multiselect {
+  display: none;
+}
