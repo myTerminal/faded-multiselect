@@ -77,6 +77,10 @@ To limit the dropdown height, supply `maxDropdownHeight` and a skinnable scrollb
         maxDropdownHeight: 200
     });
 
+## Demo
+
+You can view a demo [here](https://myterminal.github.io/faded-multiselect/example/)
+
 ## Dependency
 
 * jQuery
