@@ -26,8 +26,7 @@ var originalMultiselectSelector = "#original-multiselect",
 
 describe("Tests for faded-multiselect", function() {
     describe("Markup", function() {
-        var originalDropdownSelector = "#original-multiselect",
-            multiselect = new FadedMultiselect(originalDropdownSelector);
+        var multiselect = new FadedMultiselect(originalMultiselectSelector);
         
         it("Should add the required markup", function () {
             assert.ok($(".faded-multiselect").length,
