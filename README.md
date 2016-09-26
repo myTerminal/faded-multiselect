@@ -92,9 +92,3 @@ You can view a demo [here](https://myterminal.github.io/faded-multiselect/exampl
 
 * Search functionality
 * Auto sort selected items to the top
-
-## Let me know
-
-Let me know your suggestions on improving *faded-multiselect* at ismail@teamfluxion.com
-
-Thank you!
