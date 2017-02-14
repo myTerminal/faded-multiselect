@@ -4,7 +4,7 @@
   "description": "A simple skinnable multiselect dropdown for web",
   "scripts": {
     "install": "node installer.js",
-    "postinstall": "bower cache clean && bower install",
+    "postinstall": "bower cache clean && bower install && grunt",
     "develop": "grunt develop",
     "test": "grunt test"
   },
@@ -12,15 +12,16 @@
     "type": "git",
     "url": "https://github.com/myTerminal/faded-multiselect"
   },
+  "bugs": {
+    "url": "https://github.com/myTerminal/faded-multiselect/issues"
+  },
+  "homepage": "https://github.com/myTerminal/faded-multiselect#readme",
   "keywords": [
     "myTerminal",
     "html"
   ],
   "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
   "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/myTerminal/faded-multiselect/issues"
-  },
   "dependencies": {
     "package-script": "0.0.8"
   },
