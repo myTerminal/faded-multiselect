@@ -1,5 +1,7 @@
 # faded-multiselect
 
+[![npm version](https://badge.fury.io/js/faded-multiselect.svg)](https://badge.fury.io/js/faded-multiselect)
+[![npm downloads](https://img.shields.io/npm/dt/faded-multiselect.svg)](https://www.npmjs.com/package/faded-multiselect)
 [![Bower version](https://badge.fury.io/bo/faded-multiselect.svg)](https://badge.fury.io/bo/faded-multiselect)  
 [![Build Status](https://travis-ci.org/myTerminal/faded-multiselect.svg?branch=master)](https://travis-ci.org/myTerminal/faded-multiselect)
 [![Code Climate](https://codeclimate.com/github/myTerminal/faded-multiselect.png)](https://codeclimate.com/github/myTerminal/faded-multiselect)
