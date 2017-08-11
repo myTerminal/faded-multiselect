@@ -46,7 +46,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha-phantomjs');
     
     grunt.registerTask("default", ["build"]);
-    grunt.registerTask("build", ["uglify", "less", "mocha_phantomjs"]);
+    grunt.registerTask("build", ["uglify", "less"]);
     grunt.registerTask("test", ["mocha_phantomjs"]);
     grunt.registerTask("develop", ["watch"]);
 };
