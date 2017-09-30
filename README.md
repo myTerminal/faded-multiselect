@@ -87,8 +87,8 @@ You can view a demo [here](https://myterminal.github.io/faded-multiselect/exampl
 
 ## Dependency
 
-* jQuery
-* faded-scrollbar
+* [jQuery](https://www.npmjs.com/package/jquery)
+* [faded-scrollbar](https://www.npmjs.com/package/faded-scrollbar)
 
 ## To-do
 
