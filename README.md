@@ -12,12 +12,12 @@
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
 
-A simple skinnable multiselect dropdown for web
+A simple skinnable multi-select dropdown for web
 
 ## Features
 
-* An easy to use multiselect dropdown that works out of the box with a simple function invocation.
-* Can be easily themed
+* An easy to use multi-select dropdown that works out of the box with a simple function invocation.
+* Can be easily themed for any host application
 
 ## How to Use
 
@@ -39,17 +39,17 @@ When the HTML `select` changes (addition or removal of options), just invoke `re
 
     multiselect.refresh();
 
-In order to get an array of selected options, call `getValue()` on the multiselect as
+In order to get an array of selected options, call `getValue()` on the multi-select as
 
     multiselect.getValue();
 
-When the multiselect is no longer required, call a `destroy()` on the multiselect and the original multiselect will be brought back on the page.
+When the multi-select is no longer required, call a `destroy()` on the multi-select and the original multi-select will be brought back on the page.
 
     multiselect.destroy();
 
 ### Options
 
-For an internal *Select All* and *Unselect All* option, initialize the multiselect as
+For an internal *Select All* and *Unselect All* option, initialize the multi-select as
 
     multiselect = new FadedMultiselect("#select-to-be-tested", {
         allOption: true
