@@ -11,9 +11,9 @@
 }
 .faded-multiselect .faded-multiselect-dropdown {
   display: none;
-  background-color: #FFF;
+  background-color: #fff;
   position: relative;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@
   height: 30px;
   line-height: 30px;
   cursor: pointer;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
 .faded-multiselect .faded-multiselect-dropdown .faded-multiselect-dropdown-option input[type=checkbox] {
   float: left;

@@ -1,25 +1,4 @@
-.opacity (@opacity: 1) {
-    opacity: @opacity;
-    filter:alpha(opacity=@opacity);
-}
-
-.transition (@seconds: 1s) {
-    -moz-transition: @seconds;
-    -webkit-transition: @seconds;
-    -o-transition: @seconds;
-    transition: @seconds;
-}
-
-.round-borders (@borderRadius: 5px) {
-    -moz-border-radius: @borderRadius; 
-    -webkit-border-radius: @borderRadius;
-    border-radius: @borderRadius;
-}
-
-.box-sizing (@sizing: border-box) {
-    -moz-box-sizing: @sizing;
-    box-sizing: @sizing;
-}
+@import '../../node_modules/effortless-css/less/all.less';
 
 .faded-multiselect {
     width: 50%;
@@ -33,12 +12,12 @@
             float: right;
         }
     }
-    
+
     .faded-multiselect-dropdown {
         display: none;
-        background-color: #FFF;
+        background-color: #fff;
         position: relative;
-        border: 1px solid #CCC;
+        border: 1px solid #ccc;
         .box-sizing(border-box);
 
         .faded-multiselect-dropdown-option {
@@ -46,7 +25,7 @@
             height: 30px;
             line-height: 30px;
             cursor: pointer;
-            border-bottom: 1px solid #CCC;
+            border-bottom: 1px solid #ccc;
 
             input[type=checkbox] {
                 float: left;
@@ -64,17 +43,14 @@
     }
 
     &.open {
+
         .faded-multiselect-dropdown {
             display: inline-block;
             width: 100%;
-        }        
+        }
     }
-    
+
     .original-multiselect {
         display: none;
     }
 }
-
-
-
-
