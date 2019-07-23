@@ -10,7 +10,7 @@
 [![devDependency Status](https://david-dm.org/myTerminal/faded-multiselect/dev-status.svg)](https://david-dm.org/myTerminal/faded-multiselect#info=devDependencies)
 [![peer Dependency Status](https://david-dm.org/myTerminal/faded-multiselect/peer-status.svg)](https://david-dm.org/myTerminal/faded-multiselect#info=peerDependencies)  
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
+[![License](https://img.shields.io/github/license/myTerminal/ample-alerts.svg)](https://opensource.org/licenses/MIT)
 
 A simple skinnable multi-select dropdown for web
 
