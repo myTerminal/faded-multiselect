@@ -5,5 +5,4 @@ languages:
   PHP: true
   Python: true
 exclude_patterns:
-- "build"
 - "GruntFile.js"
