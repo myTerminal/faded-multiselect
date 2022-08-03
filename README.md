@@ -2,15 +2,12 @@
 
 [![npm version](https://badge.fury.io/js/faded-multiselect.svg)](https://badge.fury.io/js/faded-multiselect)
 [![npm downloads](https://img.shields.io/npm/dt/faded-multiselect.svg)](https://www.npmjs.com/package/faded-multiselect)
-[![Bower version](https://badge.fury.io/bo/faded-multiselect.svg)](https://badge.fury.io/bo/faded-multiselect)  
+[![Bower version](https://badge.fury.io/bo/faded-multiselect.svg)](https://badge.fury.io/bo/faded-multiselect)
+[![License](https://img.shields.io/github/license/myTerminal/ample-alerts.svg)](https://opensource.org/licenses/MIT)  
 [![Build Status](https://travis-ci.org/myTerminal/faded-multiselect.svg?branch=master)](https://travis-ci.org/myTerminal/faded-multiselect)
 [![Code Climate](https://codeclimate.com/github/myTerminal/faded-multiselect.png)](https://codeclimate.com/github/myTerminal/faded-multiselect)
 [![Coverage Status](https://img.shields.io/coveralls/myTerminal/faded-multiselect.svg)](https://coveralls.io/r/myTerminal/faded-multiselect?branch=master)  
-[![Dependency Status](https://david-dm.org/myTerminal/faded-multiselect.svg)](https://david-dm.org/myTerminal/faded-multiselect)
-[![devDependency Status](https://david-dm.org/myTerminal/faded-multiselect/dev-status.svg)](https://david-dm.org/myTerminal/faded-multiselect#info=devDependencies)
-[![peer Dependency Status](https://david-dm.org/myTerminal/faded-multiselect/peer-status.svg)](https://david-dm.org/myTerminal/faded-multiselect#info=peerDependencies)  
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![License](https://img.shields.io/github/license/myTerminal/ample-alerts.svg)](https://opensource.org/licenses/MIT)
 
 A simple skinnable multi-select dropdown for web
 
