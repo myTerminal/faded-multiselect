@@ -1,6 +1,6 @@
 {
   "name": "faded-multiselect",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "A simple skinnable multiselect dropdown for web",
   "scripts": {
     "bower": "bower",
